@@ -29,13 +29,5 @@ public class MarshmallowMonster
 		this.hasBellyButton = hasBellyButton;
 	}
 	
-	/*
-	 * monster name is Kä-pōō-Chįn¡!!!
-	 * Has no antennas
-	 * Has two eyes.
-	 * Has four legs.
-	 * Has one nose.
-	 * Has no belly button.
-	 */
 }
 

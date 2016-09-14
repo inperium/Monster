@@ -29,5 +29,39 @@ public class MarshmallowMonster
 		this.hasBellyButton = hasBellyButton;
 	}
 	
+	public String toString()
+	{
+		String description = "My moster says: My name is " + name;
+		
+		return description;
+	}
+	
+	
+	public double getAntennaCount()
+	{
+		return antennaCount;
+	}
+	
+	public int getEyeCount()
+	{
+		return eyeCount;
+	}
+	
+	public int getLegCount()
+	{
+		return legCount;
+	}
+	
+	public int getNoseCount()
+	{
+		return noseCount;
+	}
+	
+	public boolean getHasBellyButton()
+	{
+		return hasBellyButton;
+	}
+	
+	
 }
 

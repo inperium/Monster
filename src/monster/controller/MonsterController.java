@@ -1,6 +1,7 @@
 package monster.controller;
 
 import model.monster.MarshmallowMonster;
+
 import java.util.Scanner;
 
 public class MonsterController
@@ -44,6 +45,14 @@ public class MonsterController
 			{
 				printChars(". . .");
 				printChars("Progress Saved.");
+				try
+				{
+					Thread.sleep(1000);
+				} catch (InterruptedException e)
+				{
+					e.printStackTrace();
+				}
+				printChars("Closing Pokeman G0");
 			} else {
 				printChars("Are you sure? Your progress will be lost.");
 				String answerThree = keyboardInput.nextLine();
@@ -54,6 +63,15 @@ public class MonsterController
 				} else {
 					printChars(". . .");
 					printChars("Progress Saved.");
+					try
+					{
+						Thread.sleep(1000);
+					} catch (InterruptedException e)
+					{
+						e.printStackTrace();
+					}
+					printChars("Closing Pokeman G0");
+					
 				}
 			}
 		}

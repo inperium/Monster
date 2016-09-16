@@ -16,34 +16,38 @@ public class MonsterController
 		
 		public void start()
 		{
-			System.out.println("I hear something in the bushes...");
-			System.out.println("You encountered a wild " + firstMonster + ".");
-			System.out.println("He has " + firstMonster.getAntennaCount() + " antennas.");
-			System.out.println("He has " + firstMonster.getEyeCount() + " eyes.");
-			System.out.println("He has " + firstMonster.getLegCount() + " legs.");
-			System.out.println("He has " + firstMonster.getNoseCount() + " nose.");
+			printChars("I hear something in the bushes...");
+			printChars("You encountered a wild " + firstMonster + ".");
+			printChars("He has " + firstMonster.getAntennaCount() + " antennas.");
+			printChars("He has " + firstMonster.getEyeCount() + " eyes.");
+			printChars("He has " + firstMonster.getLegCount() + " legs.");
+			printChars("He has " + firstMonster.getNoseCount() + " nose.");
 			
-			System.out.println("You want to change my name?");
+			printChars("You want to change my name?");
 			String answer = keyboardInput.nextLine();
 			
 			if(answer.equalsIgnoreCase("Yes") || answer.equalsIgnoreCase("Yes."))
 			{
-				System.out.println("What would you like my name to be?");
+				printChars("What would you like my name to be?");
 				String newName = keyboardInput.nextLine();
 				firstMonster.setName(newName);
-				System.out.println("Ok, my name is now " + firstMonster + ".");
+				printChars("Ok, my name is now " + firstMonster + ".");
 			}else{
-				System.out.println("Alright, " + firstMonster + " it is!");
+				printChars("Alright, " + firstMonster + " it is!");
 			}
 			
 		}
 		
-		/*
-		 * monster name is Kä-pōō-Chįn¡!!!
-		 * Has no antennas
-		 * Has two eyes.
-		 * Has four legs.
-		 * Has one nose.
-		 * Has no belly button.
-		 */
+		private void printChars(String str){
+			for(char ch : str.toCharArray()){
+				if(ch != ' '){
+					try {
+						Thread.sleep(50);
+					} catch (InterruptedException e){
+						e.printStackTrace();
+					}
+				}
+				System.out.println(" ");
+			}
+		}
 }

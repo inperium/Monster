@@ -28,10 +28,10 @@ public class MonsterController
 			
 			if(answer.equalsIgnoreCase("Yes") || answer.equalsIgnoreCase("Yes."))
 			{
-				printChars("What would you like my name to be?");
+				printChars("What would you like its name to be?");
 				String newName = keyboardInput.nextLine();
 				firstMonster.setName(newName);
-				printChars("Ok, my name is now " + firstMonster + ".");
+				printChars("Ok, its name is now " + firstMonster + ".");
 			}else{
 				printChars("Alright, " + firstMonster + " it is!");
 			}
@@ -47,7 +47,13 @@ public class MonsterController
 						e.printStackTrace();
 					}
 				}
-				System.out.println(" ");
+				System.out.print(ch);
 			}
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e){
+				e.printStackTrace();
+			}
+			System.out.println(" ");
 		}
 }

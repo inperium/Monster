@@ -16,8 +16,8 @@ public class MonsterController
 		
 		public void start()
 		{
-			System.out.println("We made monsters today!");
-			System.out.println("Here is mine " + firstMonster);
+			System.out.println("I hear something in the bushes...");
+			System.out.println("You encountered a wild " + firstMonster + ".");
 			System.out.println("He has " + firstMonster.getAntennaCount() + " antennas.");
 			System.out.println("He has " + firstMonster.getEyeCount() + " eyes.");
 			System.out.println("He has " + firstMonster.getLegCount() + " legs.");
@@ -25,6 +25,17 @@ public class MonsterController
 			
 			System.out.println("You want to change my name?");
 			String answer = keyboardInput.nextLine();
+			
+			if(answer.equalsIgnoreCase("Yes") || answer.equalsIgnoreCase("Yes."))
+			{
+				System.out.println("What would you like my name to be?");
+				String newName = keyboardInput.nextLine();
+				firstMonster.setName(newName);
+				System.out.println("Ok, my name is now " + firstMonster + ".");
+			}else{
+				System.out.println("Alright, " + firstMonster + " it is!");
+			}
+			
 		}
 		
 		/*

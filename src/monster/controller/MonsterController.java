@@ -16,14 +16,15 @@ public class MonsterController
 		
 		public void start()
 		{
-			printChars("I hear something in the bushes...");
-			printChars("You encountered a wild " + firstMonster + ".");
-			printChars("He has " + firstMonster.getAntennaCount() + " antennas.");
-			printChars("He has " + firstMonster.getEyeCount() + " eyes.");
-			printChars("He has " + firstMonster.getLegCount() + " legs.");
-			printChars("He has " + firstMonster.getNoseCount() + " nose.");
+			printChars("I hear something in the bushes.");
+			printChars(". . .");
+			printChars("You encountered a wild " + firstMonster);
+			printChars("It has " + firstMonster.getAntennaCount() + " antennas.");
+			printChars("It has " + firstMonster.getEyeCount() + " eyes.");
+			printChars("It has " + firstMonster.getLegCount() + " legs.");
+			printChars("It has " + firstMonster.getNoseCount() + " nose.");
 			
-			printChars("You want to change my name?");
+			printChars("Do you want to change its name?");
 			String answer = keyboardInput.nextLine();
 			
 			if(answer.equalsIgnoreCase("Yes") || answer.equalsIgnoreCase("Yes."))
@@ -33,9 +34,28 @@ public class MonsterController
 				firstMonster.setName(newName);
 				printChars("Ok, its name is now " + firstMonster + ".");
 			}else{
-				printChars("Alright, " + firstMonster + " it is!");
+				printChars("Alright, " + firstMonster + " it is.");
 			}
 			
+			printChars("Would you like to save?");
+			String answerTwo = keyboardInput.nextLine();
+			
+			if(answerTwo.equalsIgnoreCase("Yes") || answerTwo.equalsIgnoreCase("Yes."))
+			{
+				printChars(". . .");
+				printChars("Progress Saved.");
+			} else {
+				printChars("Are you sure? Your progress will be lost.");
+				String answerThree = keyboardInput.nextLine();
+				
+				if(answerThree.equalsIgnoreCase("Yes") || answerThree.equalsIgnoreCase("Yes."))
+				{
+					printChars("Closing Pokeman G0");
+				} else {
+					printChars(". . .");
+					printChars("Progress Saved.");
+				}
+			}
 		}
 		
 		private void printChars(String str){
